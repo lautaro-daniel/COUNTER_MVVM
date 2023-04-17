@@ -9,6 +9,7 @@ class MainView(activity: MainActivity) : MainContract.View, ActivityView(activit
 
     private var binding: ActivityMainBinding = ActivityMainBinding.inflate(activity.layoutInflater)
 
+    //hola
     init {
         activity.setContentView(binding.root)
     }
