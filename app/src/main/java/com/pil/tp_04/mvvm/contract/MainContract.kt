@@ -1,7 +1,7 @@
 package com.pil.tp_04.mvvm.contract
 
 import androidx.lifecycle.LiveData
-import com.pil.tp_04.mvvm.viewmodel.CounterViewModel
+import com.pil.tp_04.mvvm.viewmodel.MainViewModel
 
 interface MainContract {
     interface Model {
@@ -12,9 +12,9 @@ interface MainContract {
     }
 
     interface ViewModel {
-        fun increaseValue(value:Int)
+        fun incrementValue(value:Int)
         fun decrementValue(value:Int)
         fun resetValue()
-        fun getValue(): LiveData<CounterViewModel.CounterData>
+        fun getValue(): LiveData<MainViewModel.CounterData>
     }
 }
