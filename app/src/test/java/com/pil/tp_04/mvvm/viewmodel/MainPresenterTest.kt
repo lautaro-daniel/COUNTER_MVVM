@@ -1,7 +1,7 @@
-package com.pil.tp_04.mvp.presenter
+package com.pil.tp_04.mvvm.viewmodel
 
-import com.pil.tp_04.mvp.contract.MainContract
-import com.pil.tp_04.mvp.model.MainModel
+import com.pil.tp_04.mvvm.contract.MainContract
+import com.pil.tp_04.mvvm.model.MainModel
 import io.mockk.every
 import io.mockk.mockk
 import io.mockk.verify
@@ -12,11 +12,11 @@ class MainPresenterTest {
 
     private var view: MainContract.View = mockk(relaxed = true)
 
-    private lateinit var presenter: MainContract.Presenter
+    private lateinit var presenter: MainContract.ViewModel
 
     @Before
     fun setup() {
-        presenter = MainPresenter(MainModel(), view)
+        presenter = CounterViewModel(MainModel(), view)
 
         verify { view.onIncrementButtonPressed(any()) }
         verify { view.onDecrementButtonPressed(any()) }
